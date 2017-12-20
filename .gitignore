@@ -30,3 +30,6 @@
 *.exe
 *.out
 *.app
+
+# Old Files
+/src/sort_and_time.py
