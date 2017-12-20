@@ -11,12 +11,12 @@ import random
 #Sorting Module: Sorts an array and returns time to sort
 
 # Useful methods:
-# id 0: insertionSortWithTime() returns arr,t (need to capture both)
+# id 0: insertionSortWithTime() returns timeToSort
 # 1: binaryInsertionSortWithTime()
 # 2: quickSortWithTime()
 # 3: quickSort3WithTime()
 # 4: shellSortWithTime()
-# Just pass in an array and it will sort and give you the arr and time
+# Just pass in an array and it will sort and give you the time it took
 
 # Helper swap function
 def swap(arr,i,j):
@@ -205,32 +205,6 @@ def gapInsertionSort(alist,start,gap):
             position = position-gap
 
         alist[position]=currentvalue
-        
-        
-# Races all 5 sorting methods, compares their times and returns
-# just which one was the fastest (ID)
-        
-# Sort(id), instead of calling each method by yourself, just pass in
-# Sort(0) to do insertionSortWithTime or Sort(2) to do quickSortWithTime
-# Returns the package of the sorted array and the time it took to solve
-def sort(sort_id,array):
-    if sort_id == 0:
-        t = insertionSortWithTime(array)
-        return t
-    elif sort_id == 1:
-        t = binaryInsertionSortWithTime(array)
-        return t
-    elif sort_id == 2:
-        t = quickSortWithTime(array)
-        return t
-    elif sort_id == 3:
-        t = quickSort3WithTime(array)
-        return t
-    elif sort_id == 4:
-        t = shellSortWithTime(array)
-        return t
-    else:
-        print("Sorry that sort doesn't exist!")
 
 
 a = [2,3,4,5,1,234,245,23,547,3,543,426,3,654,2456,432,434,32,2424,423,
@@ -243,10 +217,11 @@ d = [20,19,18,17,16,15,14,13,11,12,10,7,9,8,6,5,4,3,2,1,0]
 # list(a) makes a copy of the array to pass in
 # so this way one test doesn't affect the other
 t = insertionSortWithTime(list(a))
+print(t)
+
 t2 = binaryInsertionSortWithTime(list(a))
 t3 = quickSortWithTime(list(a))
 t4 = quickSort3WithTime(list(a))
 t5 = shellSortWithTime(list(a))
-print(a)
-print(t/t2)
 
+print(t6)
