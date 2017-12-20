@@ -1,0 +1,17 @@
+1) Change from returning a tuple of the sorted array and time to just returning the time
+Since arrays are passed by reference, there is no need to return the sorted array. 
+My primary motivation for doing so earlier was so that when I run tests, the sample array
+I want to test on is not modified each time:
+
+b = [1,34,23,86,2]
+arr,t = insertionSortWithTime(b) # Now b looks like [1,2,23,34,86]
+arr2,t2 = binaryInsertionSortWithTime(b) # So a sorted array is passed into the second test!
+
+But now I realize that is not the correct way to achieve what I want to do. Instead,
+I can define a copy() function which makes a copy of the test array to be passed into
+the tests I write (like the two above).
+
+And then, when I am done testing and actually apply my algorithm to a real dataset, then
+I want the dataset to be sorted, so I can directly do it rather than sorting copies.
+
+In both cases, there is no need for a tuple to return the sorted array
