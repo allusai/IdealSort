@@ -223,5 +223,3 @@ t2 = binaryInsertionSortWithTime(list(a))
 t3 = quickSortWithTime(list(a))
 t4 = quickSort3WithTime(list(a))
 t5 = shellSortWithTime(list(a))
-
-print(t6)
