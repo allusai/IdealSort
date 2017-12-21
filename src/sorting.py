@@ -216,9 +216,23 @@ d = [20,19,18,17,16,15,14,13,11,12,10,7,9,8,6,5,4,3,2,1,0]
 
 # list(a) makes a copy of the array to pass in
 # so this way one test doesn't affect the other
-t = insertionSortWithTime(list(a))
+arr = c
 
-t2 = binaryInsertionSortWithTime(list(a))
-t3 = quickSortWithTime(list(a))
-t4 = quickSort3WithTime(list(a))
-t5 = shellSortWithTime(list(a))
+t = insertionSortWithTime(list(arr))
+
+t2 = binaryInsertionSortWithTime(list(arr))
+t3 = quickSortWithTime(list(arr))
+t4 = quickSort3WithTime(list(arr))
+t5 = shellSortWithTime(list(arr))
+
+print(t5/t4)
+
+# Write these same tests in a file that uses this module
+# Then do the same for features
+
+
+
+
+            
+    
+    
