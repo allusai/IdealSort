@@ -217,7 +217,6 @@ d = [20,19,18,17,16,15,14,13,11,12,10,7,9,8,6,5,4,3,2,1,0]
 # list(a) makes a copy of the array to pass in
 # so this way one test doesn't affect the other
 t = insertionSortWithTime(list(a))
-print(t)
 
 t2 = binaryInsertionSortWithTime(list(a))
 t3 = quickSortWithTime(list(a))
