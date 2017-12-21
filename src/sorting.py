@@ -229,10 +229,3 @@ print(t5/t4)
 
 # Write these same tests in a file that uses this module
 # Then do the same for features
-
-
-
-
-            
-    
-    
