@@ -20,21 +20,30 @@ e = [1,2,13,4,5,6,7,8,10,11,12,3,14,15,16,19,20,111,123,10] # Nearly sorted
 fastest = sortingevaluation.raceAlgorithms(a)
 print("Fastest algorithm for a (random) was: ", 
       sortingevaluation.whichSortHasThisID(fastest))
+print()
 
 
 fastest = sortingevaluation.raceAlgorithms(b)
 print("Fastest algorithm for b (small,random) was: ", 
       sortingevaluation.whichSortHasThisID(fastest))
+print()
+
 
 fastest = sortingevaluation.raceAlgorithms(c)
 print("Fastest algorithm for c (few unique vals) was: ", 
       sortingevaluation.whichSortHasThisID(fastest))
+print()
+
 
 fastest = sortingevaluation.raceAlgorithms(d)
 print("Fastest algorithm for d (reversed) was: ", 
       sortingevaluation.whichSortHasThisID(fastest))
+print()
+
 
 fastest = sortingevaluation.raceAlgorithms(e)
 print("Fastest algorithm for e (nearly sorted) was: ", 
       sortingevaluation.whichSortHasThisID(fastest))
+print()
+
 
