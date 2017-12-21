@@ -25,7 +25,7 @@ def raceAlgorithms(array):
     fastestID = -1
     
     for i in range(0,5):
-    	# Time each sorting algorithm on a copy of the array
+        # Time each sorting algorithm on a copy of the array
         t = sort(i,list(array))
         print("Time was: ",t)
         
@@ -64,6 +64,25 @@ b = [1,34,23,86,2]
 c = [2,2,2,1,1,1,5,5,5,2,2,2,2,2,2,1,1,1,1,1,1,1,1,5,5,5,5,5,5,2,1,2,1,5,2,1,
      5,5,1,2,5,1,5,2,1,2,5,2,1]
 d = [20,19,18,17,16,15,14,13,11,12,10,7,9,8,6,5,4,3,2,1,0]
+
+# This is a helpful function for the user to understand which ID
+# corresponds to each sorting algorithm
+def whichSortHasThisID(sort_id):
+    if sort_id == 0:
+        return "Insertion Sort"
+    elif sort_id == 1:
+         return "Binary Insertion Sort"
+    elif sort_id == 2:
+         return "QuickSort"
+    elif sort_id == 3:
+         return "QuickSort3"
+    elif sort_id == 4:
+         return "Shell Sort"
+    else:
+        return "Sorry that sort doesn't exist!"
+
         
-fastest = raceAlgorithms(d)
+fastest = raceAlgorithms(c)
 print("Fastest algorithm was: ", fastest)
+
+# Write these same trials in a test file that uses this module
