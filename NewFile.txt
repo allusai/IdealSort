@@ -1,1 +1,3 @@
 This is a file that we worked on which we are adding to the repository.
+
+Now, the instructor updated a file for one our assignments. We need to get these updates into our local repo.
