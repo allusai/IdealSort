@@ -9,7 +9,6 @@ Created on Mon Jan  1 22:24:58 2018
 import matplotlib.pyplot as plt; plt.rcdefaults()
 import numpy as np
 import matplotlib.pyplot as plt
-import subprocess # Runs helper python scripts in other python scripts
 import performance_test_arrays as gen
 
  
@@ -38,3 +37,15 @@ arrays = gen.createDataArrays()
 # print(arrays[251])  Works!
 
 # These are the average times on these 300 arrays for each sorting algorithm
+averageIdealSort = gen.averageIdealSortTime(arrays,0,300)
+averageInsertionSort = gen.averageInsertionSortTime(arrays,0,300)
+averageBinInsertionSort = gen.averageBinaryInsertionSortTime(arrays,0,300)
+averageQuickSort = gen.averageQuickSortTime(arrays,0,300)
+averageQuickSort3 = gen.averageQuickSort3Time(arrays,0,300)
+averageShellSort = gen.averageShellSortTime(arrays,0,300)
+
+# Store the average times in an array for convenience
+averageTimes = [averageIdealSort,averageInsertionSort,averageBinInsertionSort,
+                averageQuickSort,averageQuickSort3,averageShellSort] 
+for n in range(1,6):
+    print(averageTimes[n]/averageTimes[0])

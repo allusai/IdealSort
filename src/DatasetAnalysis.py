@@ -24,7 +24,8 @@ from sklearn.svm import SVC
 
 # Load dataset
 names = ['Sort-Score', 'Unique-Vals', 'Num-Elements', 'Algorithm']
-dataset = pandas.read_csv('/Users/saikalyan/Desktop/dataset.csv', names=names)
+filePath = '/Users/saikalyan/Desktop/IdealSort/data/dataset.csv'
+dataset = pandas.read_csv(filePath, names=names)
 
 # shape
 print(dataset.shape)

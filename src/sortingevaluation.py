@@ -27,7 +27,6 @@ def raceAlgorithms(array):
     for i in range(0,5):
         # Time each sorting algorithm on a copy of the array
         t = sort(i,list(array))
-        print("Time was: ",t)
         
         if t < fastestTime:
             fastestTime = t
