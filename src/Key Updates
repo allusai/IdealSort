@@ -15,3 +15,11 @@ And then, when I am done testing and actually apply my algorithm to a real datas
 I want the dataset to be sorted, so I can directly do it rather than sorting copies.
 
 In both cases, there is no need for a tuple to return the sorted array
+
+2) Now that the main project is up and running, I want to show how good IdealSort is using the graphing libraries in Python. This will give the user a good idea of whether using IdealSort in their applications will really give them a meaningful time boost since a 30% boost for a medium-large company processing millions of sorting requests per second is different from a hobbyist programmer. It’s good to know whether taking the time to use IdealSort instead of just using a QuickSort is worth it.*
+
+Comparing Performance:
+There are 200 test cases in the small dataset. The last value in the column is the id of the fastest sorting algorithm.
+
+Keep track of the time it takes to sort using the fastest algorithm (IdealSort) and average these best times.
+Compare this average to the average for just using QuickSort or just using InsertionSort.
