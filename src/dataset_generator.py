@@ -8,6 +8,8 @@ Created on Thu Dec 21 14:23:00 2017
 
 import generate_arrays as generate
 import random
+import features
+import sortingevaluation
 
 # This program will create the .data file that is our dataset
 
@@ -72,7 +74,25 @@ for index in range(180,200):
     size = 100
     dataArrays[index] = generate.createNearlyDescendingArray(size)
     
-print(dataArrays[100])
-print(dataArrays[122])
-print(dataArrays[147])
+
+# Now to actually write the file that contains the data in csv format
+file = open("testfile.txt","w")
+
+for i in range(0,200):
+    arr = dataArrays[i]
+    
+    # Analyze the features of this array
+    feature1 = features.sortScore(arr)
+    feature2 = features.uniqueVals(arr)
+    feature3 = features.numElements(arr)
+    
+    # Find the fastest algorithm for this array
+    algorithm = sortingevaluation.raceAlgorithms(arr)
+    
+    # Write this data
+    line = str(feature1) + "," + str(feature2) + "," + str(feature3)
+    line += "," + str(algorithm) + "\n"
+    
+    file.write(line)
+    
     
