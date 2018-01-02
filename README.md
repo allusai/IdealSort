@@ -2,9 +2,7 @@
 Analyzes the dataset for features and uses a machine learning model to pick the optimal sorting algorithm.
 
 IdealSort is faster by 30% than just using any one sorting algorithm by taking advantage of "adaptive" sorting algorithms.
-Some sorting algorithms like QuickSort3 or Shell Sort perform in nearly O(n) time for special situations. For extremely large
-datasets (think 100 arrays of size 100 each), IdealSort's forethought actually results in an average 85% increase in sorting
-speed even after accounting for the time to analyze the features of the dataset.
+Some sorting algorithms like QuickSort3 or Shell Sort perform in nearly O(n) time for special situations. It is simply inefficient to always use only QuickSort for sorting your arrays when real-world data often has patterns that make a different sorting algorithm more effective for that specific use case. For extremely large datasets (think 100 arrays of size 100 each), IdealSort's forethought actually results in an average 85% increase in sorting speed (compared to just using QuickSort or jsut using Insertion Sort all the time) even after accounting for the time to analyze the features of the dataset.
 
 This is an oversimplification of the machine learning decision tree of the model, but usually:
 When the list is nearly sorted, IdealSort picks Insertion Sort.        ex: [1,2,4,3,5]
